@@ -9,7 +9,7 @@ import type {
 import {ProductItem} from '~/components/ProductItem';
 
 export const meta: MetaFunction = () => {
-  return [{title: 'Hydrogen | Home'}];
+  return [{title: 'Hydrogen | Home 1111'}];
 };
 
 export async function loader(args: LoaderFunctionArgs) {
@@ -30,6 +30,7 @@ async function loadCriticalData({context}: LoaderFunctionArgs) {
   const [{collections}] = await Promise.all([
     context.storefront.query(FEATURED_COLLECTION_QUERY),
     // Add other queries here, so that they are loaded in parallel
+    
   ]);
 
   return {
@@ -73,6 +74,7 @@ function FeaturedCollection({
 }) {
   if (!collection) return null;
   const image = collection?.image;
+
   return (
     <Link
       className="featured-collection"
@@ -85,6 +87,7 @@ function FeaturedCollection({
       )}
       <h1>{collection.title}</h1>
     </Link>
+    
   );
 }
 

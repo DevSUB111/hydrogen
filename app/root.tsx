@@ -92,7 +92,7 @@ export async function loader(args: LoaderFunctionArgs) {
     },
   };
 }
-
+ 
 /**
  * Load data necessary for rendering content above the fold. This is the critical data
  * needed to render the page. If it's unavailable, the whole page should 400 or 500 error.
@@ -104,7 +104,7 @@ async function loadCriticalData({context}: LoaderFunctionArgs) {
     storefront.query(HEADER_QUERY, {
       cache: storefront.CacheLong(),
       variables: {
-        headerMenuHandle: 'main-menu', // Adjust to your header menu handle
+        headerMenuHandle: 'main-menu', // Adjust to your header menu handle test
       },
     }),
     // Add other queries here, so that they are loaded in parallel

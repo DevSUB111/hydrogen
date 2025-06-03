@@ -488,7 +488,7 @@ export type MoneyProductItemFragment = Pick<
 
 export type ProductItemFragment = Pick<
   StorefrontAPI.Product,
-  'id' | 'handle' | 'title'
+  'id' | 'handle' | 'title' | 'vendor'
 > & {
   featuredImage?: StorefrontAPI.Maybe<
     Pick<StorefrontAPI.Image, 'id' | 'altText' | 'url' | 'width' | 'height'>
